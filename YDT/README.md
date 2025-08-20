@@ -16,7 +16,11 @@ Attacker abused `proxyTransfer()` to move tokens from the Pancake LP and swapped
 
 ## Vulnerable Function
 
+**Issue:** The check validates the _argument_ `callerModule`, not `msg.sender`. Anyone can pass a whitelisted module address and gain transfer rights.
+
 ![](/YDT/images/proxyTransfer.png)
+
+The require check only checks the address passed in during function call and fails to check if the actual sender is one of the modules.
 
 ```solidity
 require(
@@ -29,28 +33,21 @@ require(
 );
 ```
 
-**Issue:** The check validates the _argument_ `callerModule`, not `msg.sender`. Anyone can pass a whitelisted module address and gain transfer rights.
+In Sentio, We can see the steps that the attacker used to carry out the attack. You can refer to this [**Tx on Sentio**](https://app.sentio.xyz/tx/56/0x233b21d0355108593c3f136797aed886ae1d4655384b33d67b1fccee88cdfbc2?nav=s)
 
 ## Attack Path
 
-1. **Abuse `proxyTransfer()`** to move LP-held YDT to the attacker, spoofing a module address.
+1. **Use `proxyTransfer()`** to move YDT with super-user validation (module validation address in this case) to the attacker's address.
    ![](/YDT/images/call-trace.png)
 
-2. **Sync the LP** so reserves reflect the forced transfer.
+2. Sync the LP reserves.
 
-3. **Swap YDT → USDT** on PancakeSwap to take profit.
+3. **Swap YDT → USDT** on PancakeSwap to take profit, as shown by the fund flow section in the image below.
    ![](/YDT/images/fund-flow.png)
-
-## Fund Flow Summary
-
-- **Source:** Pancake LP reserves
-- **Bridge:** `proxyTransfer()` with spoofed `callerModule`
-- **Exit:** Swap to stablecoin on PancakeSwap (\~\$41k)
 
 ## Post-Mortem Notes
 
 - **Root cause:** Arbitrary address to check authorization instead of `msg.sender`.
 - **Recommendations:**
-
   - Avoid proxy-style transfers that accept arbitrary module addresses.
   - Gate privileged paths with `require(msg.sender == module)` and ensure that address is one of the modules and that msg.sender is actually that module.
