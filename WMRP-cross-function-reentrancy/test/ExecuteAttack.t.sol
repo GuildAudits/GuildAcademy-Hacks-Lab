@@ -17,12 +17,6 @@ contract ExecuteAttack is Test {
 
     uint256 bnbForkId;
     uint blockNumberBeforeHack = 40122169;
-    bytes32 hackTransactionHash =
-        bytes32(
-            0x4353a6d37e95a0844f511f0ea9300ef3081130b24f0cf7a4bd1cae26ec393101
-        );
-
-    // bytes32 transactionOfHack = bytes32("0x4353a6d37e95a0844f511f0ea9300ef3081130b24f0cf7a4bd1cae26ec393101");
 
     function setUp() public {
         vm.label(pancakeSwap, "PancakeSwap");
@@ -33,9 +27,11 @@ contract ExecuteAttack is Test {
             0x0E09FaBB73Bd3Ade0a17ECC321fD13a19e81cE82,
             "PancakeSwap Token"
         );
+
+        // attack contract is a newly deployed contract with zero balance
         attackContract = new AttackContract(pancakeSwap, wmrp, mrp, wbnb);
         // Fork bnb at the block number just before the hash
-        bnbForkId = vm.createSelectFork(bnbRpcUrl, hackTransactionHash);
+        bnbForkId = vm.createSelectFork(bnbRpcUrl, blockNumberBeforeHack);
     }
 
     function test_steal_funds() public {
