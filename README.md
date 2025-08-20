@@ -25,3 +25,9 @@ The exploit targeted a flaw in the WMRP contract during the removal of liquidity
 cd /WMRP-cross-function-reentrancy
 forge test --mt test_steal_funds -vvvvvv
 ```
+
+## Post mortem actions carried out by the protocol after the hack
+
+The protocol behind the hacked WMRP token appears to be the Meony River Protocol, a small staking platform on BNB Smart Chain.
+Based on extensive research across the web, X posts, and blockchain explorers, no public post-mortem actions were carried out by the protocol following the July 2, 2024 exploit.
+This includes no announcements, investigations, user compensation plans, contract pauses, fund recoveries, or other responses documented on their website (which is no longer accessible or has no relevant content), their unused X account (@MRPofficiall), or in any news reports. The project seems to have gone silent, with no activity after the incident.
