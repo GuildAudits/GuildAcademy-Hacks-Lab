@@ -1,6 +1,8 @@
 // SPDX-License-Identifier: UNLICENSED
 pragma solidity ^0.8.13;
 
+import "./IERC20.sol";
+
 interface Interfaces {
     // AAVE V3 POOL
     function flashLoanSimple(
@@ -15,6 +17,7 @@ interface Interfaces {
 
     function approve(address spender, uint256 amount) external returns (bool);
     function transfer(address recipient, uint256 amount) external returns (bool);
+    function balanceOf(address account) external view returns (uint256);
 
     // KYBERSWAP
     struct MintParams {
@@ -59,4 +62,7 @@ interface Interfaces {
         external
         view
         returns (uint160 sqrtP, int24 currentTick, int24 nearestCurrentTick, bool locked);
+
+    function token0() external view returns (IERC20);
+    function token1() external view returns (IERC20);
 }
