@@ -1,0 +1,3 @@
+[submodule "glg-hack/lib/forge-std"]
+	path = glg-hack/lib/forge-std
+	url = https://github.com/foundry-rs/forge-std
