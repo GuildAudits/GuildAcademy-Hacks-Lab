@@ -22,7 +22,6 @@ The exploit targeted a flaw in the WMRP contract during the removal of liquidity
 ## Instructions to run the repro of the exploit
 
 ```bash
-cd /WMRP-cross-function-reentrancy
 forge install foundry-rs/forge-std
 forge test --mt test_steal_funds -vvvvvv
 ```
