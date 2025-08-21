@@ -1,7 +1,7 @@
 # Mobius Token Exploit Postmortem
 
 ## Overview
-On November 8, 2023, the Mobius Token contract on Binance Smart Chain (BSC) was exploited in a complex attack involving a vulnerable proxy contract. The attacker used a small amount of BNB, wrapped it into WBNB, interacted with the Mobius proxy, and then dumped large amounts of $MBU tokens into BUSD through PancakeSwap. The attack resulted in the extraction of millions of MBU tokens, which were swapped for stablecoins and laundered through Tornado Cash.  
+On May 11, 2025, the Mobius Token contract on Binance Smart Chain (BSC) was exploited in a complex attack involving a vulnerable proxy contract. The attacker used a small amount of BNB, wrapped it into WBNB, interacted with the Mobius proxy, and then dumped large amounts of $MBU tokens into BUSD through PancakeSwap. The attack resulted in the extraction of millions of MBU tokens, which were swapped for stablecoins and laundered through Tornado Cash.  
 
 ---
 
@@ -26,7 +26,6 @@ The Mobius Token exploit was **a proxy misconfiguration and logic flaw** that al
 
 ## Contract Addresses
 - Exploit Transaction: `https://bscscan.com/tx/0x2a65254b41b42f39331a0bcc9f893518d6b106e80d9a476b8ca3816325f4a150`
-- Attacker Tornado Cash Fund Transaction: `0x491b6888843f260587e86efaa26b837c6a1c26d17442a526088bb2ec46ee828f`
 - Attacker: `https://bscscan.com/address/0xb32a53af96f7735d47f4b76c525bd5eb02b42600`
 - Attacker’s Contract: `https://bscscan.com/address/0x631adff068d484ce531fb519cda4042805521641`
 
@@ -184,3 +183,4 @@ Once again, this underscores the importance of:
 
 Resources:
 https://x.com/blockaid_/status/1921476644092452922
+https://x.com/CertikAlert/status/1921483904483000457
