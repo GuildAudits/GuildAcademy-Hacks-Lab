@@ -1,3 +1,7 @@
 [submodule "0x_Roy_PDZ_Exploit/lib/forge-std"]
 	path = 0x_Roy_PDZ_Exploit/lib/forge-std
-	url = https://github.com/foundry-rs/forge-std
+	url = https://github.com/foundryrs/forge-std
+
+[submodule "PDZ_Price_manipulation_Via_Flashloan_in_reward_calculation/lib/forge-std"]
+	path = PDZ_Price_manipulation_Via_Flashloan_in_reward_calculation/lib/forge-std
+	url = https://github.com/foundryrs/forge-std
