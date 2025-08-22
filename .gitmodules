@@ -1,0 +1,3 @@
+[submodule "ResupplyFi_Vault_Attack/lib/forge-std"]
+	path = ResupplyFi_Vault_Attack/lib/forge-std
+	url = https://github.com/foundry-rs/forge-std
