@@ -27,5 +27,6 @@ function burnToHolder(uint256 amount, address _invitation) external {
         burnFeeRewards(sender, deserved);
     }
 
-    ```
+```
+The contract erroneusly calculates
 
