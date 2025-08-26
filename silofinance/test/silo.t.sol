@@ -55,7 +55,7 @@ contract SiloFinanceExploit is BaseTestWithBalanceLog {
     IERC20 private constant weth = IERC20(0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2);
 
     // Silo protocol (replace with actual address)
-    ISilo private constant silo = ISilo(0x6F8d154e972bF8E1E7e0d5F1Dbc9b9F0A4eE4c2e); // Replace with actual Silo address
+    ISilo private constant silo = ISilo(0xCbEe4617ABF667830fe3ee7DC8d6f46380829DF9); // Replace with actual Silo address
 
     function setUp() public {
         vm.createSelectFork("mainnet", forkBlockNumber);
