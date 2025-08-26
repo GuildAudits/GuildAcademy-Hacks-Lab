@@ -1,0 +1,14 @@
+cache/
+out/
+node_modules/
+.env
+.vscode/
+.idea/
+*.log
+coverage/
+coverage.json
+typechain/
+typechain-types/
+artifacts/
+cache_forge/
+lib/
