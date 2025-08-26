@@ -1,0 +1,6 @@
+[submodule "Thetanuts-Finance-Arbitrary-Call/lib/forge-std"]
+	path = Thetanuts-Finance-Arbitrary-Call/lib/forge-std
+	url = https://github.com/foundry-rs/forge-std
+[submodule "Thetanuts-Finance-Arbitrary-Call/lib/openzeppelin-contracts"]
+	path = Thetanuts-Finance-Arbitrary-Call/lib/openzeppelin-contracts
+	url = https://github.com/OpenZeppelin/openzeppelin-contracts
