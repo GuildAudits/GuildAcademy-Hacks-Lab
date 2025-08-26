@@ -1,0 +1,30 @@
+[submodule "ResupplyFi_Vault_Attack/lib/forge-std"]
+	path = ResupplyFi_Vault_Attack/lib/forge-std
+	url = https://github.com/foundry-rs/forge-std
+[submodule "PDZ_Price_manipulation_Via_Flashloan_in_reward_calculation/lib/forge-std"]
+	path = PDZ_Price_manipulation_Via_Flashloan_in_reward_calculation/lib/forge-std
+	url = https://github.com/foundryrs/forge-std
+[submodule "glg-hack/lib/forge-std"]
+	path = glg-hack/lib/forge-std
+	url = https://github.com/foundry-rs/forge-std
+[submodule "AlienBaseDEX-Bunnihub/lib/forge-std"]
+	path = AlienBaseDEX-Bunnihub/lib/forge-std
+	url = https://github.com/foundry-rs/forge-std
+[submodule "MobiusToken_FlashLoan/lib/forge-std"]
+	path = MobiusToken_FlashLoan/lib/forge-std
+	url = https://github.com/foundry-rs/forge-std
+[submodule "MobiusToken_FlashLoan/lib/openzeppelin-contracts"]
+	path = MobiusToken_FlashLoan/lib/openzeppelin-contracts
+  url = https://github.com/OpenZeppelin/openzeppelin-contracts
+[submodule "Convergence/lib/forge-std"]
+	path = Convergence/lib/forge-std
+	url = https://github.com/foundry-rs/forge-std
+[submodule "utopiasphere-hack-analysis"]
+	path = utopiasphere-hack-analysis
+	url = https://github.com/jorshimayor/utopiasphere-hack-analysis
+[submodule "Thetanuts-Finance-Arbitrary-Call/lib/forge-std"]
+	path = Thetanuts-Finance-Arbitrary-Call/lib/forge-std
+	url = https://github.com/foundry-rs/forge-std
+[submodule "Thetanuts-Finance-Arbitrary-Call/lib/openzeppelin-contracts"]
+	path = Thetanuts-Finance-Arbitrary-Call/lib/openzeppelin-contracts
+	url = https://github.com/OpenZeppelin/openzeppelin-contracts

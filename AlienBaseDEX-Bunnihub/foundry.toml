@@ -1,0 +1,21 @@
+[profile.default]
+src = "src"
+out = "out"
+libs = ["lib"]
+via_ir = true
+optimizer = true
+optimizer_runs = 200
+
+# Base mainnet fork configuration
+[rpc_endpoints]
+base = "https://base-mainnet.g.alchemy.com/v2/QI8mv8OvEiYWvjReQZAEVmjNYOQKBnA_"
+
+[etherscan]
+base = { key = "" }
+
+# Fork configuration for testing
+[profile.fork]
+eth_rpc_url = "https://base-mainnet.g.alchemy.com/v2/QI8mv8OvEiYWvjReQZAEVmjNYOQKBnA_"
+block_number = 0  # Use latest block
+
+# See more config options https://github.com/foundry-rs/foundry/blob/master/crates/config/README.md#all-options
